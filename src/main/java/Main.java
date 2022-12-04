@@ -8,6 +8,6 @@ public class Main {
         System.out.println(service.calcSqr(400));
         System.out.println(service.calcSqr(441));
         System.out.println(service.calcSqr(484));
-            }
     }
+}
 
