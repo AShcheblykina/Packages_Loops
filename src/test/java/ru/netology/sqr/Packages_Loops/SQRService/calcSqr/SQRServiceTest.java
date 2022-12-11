@@ -7,27 +7,37 @@ public class SQRServiceTest {
     @Test
     public void shouldCalcExact() {
         SQRService service = new SQRService();
-        int expected = 20;
-        int actual = service.calcSqr(400);
+
+        int expected = 3;
+        int actual = service.calcSqr(200, 300);
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void shouldCalcInexact() {
+    public void shouldCalcUnit() {
         SQRService service = new SQRService();
-        int expected = 21;
-        int actual = service.calcSqr(441);
+
+        int expected = 1;
+        int actual = service.calcSqr(200, 250);
+
 
         Assertions.assertEquals(expected, actual);
+
     }
 
     @Test
-    public void shouldCalcexac() {
+    public void shouldCalcNull() {
         SQRService service = new SQRService();
-        int expected = 22;
-        int actual = service.calcSqr(484);
+
+        int expected = 0;
+        int actual = service.calcSqr(200, 200);
 
         Assertions.assertEquals(expected, actual);
+
     }
 }
+
+
+
+

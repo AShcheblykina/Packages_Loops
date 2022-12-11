@@ -2,17 +2,16 @@ package ru.netology.sqr.Packages_Loops.SQRService.calcSqr;
 
 public class SQRService {
 
-    public int calcSqr(int x) {
-        int bottomline = 400;
-        int upperbound = 500;
+    public int calcSqr(int bottomline, int upperbound) {
+        int counter = 0;
         for (int i = 10; i <= 99; i++) {
-            if (i * i >= x)
-                if (bottomline >= 400)
-                    if (upperbound <= 500) {
-                        return i;
-                    }
+            int iSquare = i * i;
+            if (iSquare >= bottomline)
+                if (iSquare <= upperbound) {
+                    counter++;
+                }
         }
-        return -1;
+        return counter;
     }
 }
 
